@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Overview
 
-## Getting Started
+## Decisions
 
-First, run the development server:
+### 1. Validation Strategy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+For forms, like the one to add and resign territories, I would've used react-form-hook but since I didn't get to it, i ended up using useState for the exisitng simple filters.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. State Management
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I've used basic react hooks since the scope currently wasn't complicated enough to warrant redux or context API.
+If there was some global state like logged in user etc, I would've used context API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Frontend Architecture
 
-## Learn More
+- I've used Modular component architecture with clear separation so that app scales without a lot of refactoring
+- I've create generic components like Modal, Navbar etc.
+- I've grouped components together based on which dashboard they were a part of for easy maintainability and scalability.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. AI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- AI was used to understand the market and what sort of metrics they would be needing to address some of the pain points.
+- It was also used to generating the mock data and the intial components which were later refactored and improved.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Future Considerations
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **User Authentication**: Role-based access control and user management
+2. **Data Export**: CSV/Excel export functionality
+3. **Advanced Filtering**: Complex query building and saved filters
+4. **Actionable Insights**: Insights on which regions is doing well and which is not and why
