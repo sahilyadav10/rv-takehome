@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen, waitFor } from "@testing-library/react";
-import PerformanceMetrics from "../../components/PerformanceMetrics";
+import PerformanceMetrics from "../../components/app/pipeline-dashboard/PerformanceMetrics";
 
 // Mock fetch
 const mockFetch = global.fetch as jest.MockedFunction<typeof fetch>;

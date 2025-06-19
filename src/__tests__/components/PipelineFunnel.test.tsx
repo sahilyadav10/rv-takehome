@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen, waitFor } from "@testing-library/react";
-import PipelineFunnel from "../../components/PipelineFunnel";
+import PipelineFunnel from "../../components/app/pipeline-dashboard/PipelineFunnel";
 
 // Mock fetch
 const mockFetch = global.fetch as jest.MockedFunction<typeof fetch>;
