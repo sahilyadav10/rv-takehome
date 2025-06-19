@@ -30,7 +30,9 @@ export default function Home() {
       {/* Navigation Header */}
       <Navbar activeView={activeView} onViewChange={setActiveView} />
       {/* Main Content */}
-      <main className="w-full max-w-7xl row-start-2">{renderActiveView()}</main>
+      <main className="w-full md:mx-auto md:max-w-4xl xl:max-w-5xl">
+        {renderActiveView()}
+      </main>
     </div>
   );
 }
