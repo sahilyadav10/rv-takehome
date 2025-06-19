@@ -5,7 +5,7 @@ import PipelineDashboard from "../components/PipelineDashboard";
 import TerritoryManagement from "../components/TerritoryManagement";
 import GeographicIntelligence from "../components/GeographicIntelligence";
 import PerformanceComparison from "../components/PerformanceComparison";
-import Navbar, { ViewType } from "../components/Navbar";
+import Navbar, { ViewType } from "../components/generic/Navbar";
 
 export default function Home() {
   const [activeView, setActiveView] = useState<ViewType>("pipeline");
